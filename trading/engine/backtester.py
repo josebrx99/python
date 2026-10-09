@@ -23,28 +23,6 @@ path_data = vars.path_data
 
 
 
-# Parameters
-risk_per_trade          = 0.01
-fee_rate                = 0.0007
-slippage_pct            = 0.0005
-atr_period              = 14
-# min_holding_period    = 0
-leverage                = 100     # 10 = 1:10
-# max_loss_streak_limit = 5
-# cooldown_after_losses = 10
-# ST y TP
-# atr_sl                = 2          # Value for SL. Scalping: 0.8-1.5 | Intradia: 1.5-2.5 | Swing: 2-3.5 | Largo: 3-5
-# multiplier_tp         = 1.5        # Value for TP -> atr_tp = atr_sl x multiplier_tp. 
-# use_r_tp              = False      # Si se activa, no se usara ATR si no R para fijar sl, tp. R: distancia a sl, para calcular tp. 
-# factor_r_tp           = 2          # Factor para fijar TP = entry price + factor_r_tp * R. R=price - sl. Conservador: 1-1.5 | Balanceado: 2 | Tendencial | 3-5
-# # Trailing
-# use_trailing_stop     = False
-# use_breakeven         = use_trailing_stop  # Siempre usar
-# trailing_atr_mult     = 1                  # default=2. Value por trailing stop
-# trailing_activation_r = 2.5                # default=2. Solo activar trailing después de 2R de ganancia, el break-even se activa antes, al llegar a 1R. Evitar que sea igual que breakeven_trigger_r
-# breakeven_trigger_r   = 3                  # default=1. break-even al llegar a 1R si valor = 0 -> stop loss se posicione en precio de entrada. Cero ganancias
-
-
 # ── Gestión de riesgo de cartera ─────────────────────────────
 # max_dd_daily_pct       = 0.05        # parar si el día pierde >5%
 # cooldown_bars          = 3           # barras de espera tras un SL
