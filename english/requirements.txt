@@ -1,9 +1,0 @@
-gradio
-
-openpyxl
-pandas
-numpy
-datedelta
-wordfreq
-gtts
-pydub
