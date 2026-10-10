@@ -545,14 +545,12 @@ def engine(
     slippage_pct=0.0005,
     leverage=100,
     atr_sl=2,
-    multiplier_tp=1.5, # Es X veces atr_sl
-    use_r_tp=False,
-    factor_r_tp=2,
+    multiplier_tp=1.5,
     use_trailing_stop=False,
     use_breakeven=False, # Se activa solo si está activo use_trailing_stop
     trailing_atr_mult=1,
     trailing_activation_r=2.5,
-    breakeven_trigger_r=3,
+    breakeven_trigger_r=2.5,
     same_bar_policy="SL_FIRST",
     close_on_reverse=True,
     annualization_factor=None
@@ -699,18 +697,9 @@ def engine(
             # TAKE PROFIT
             # ----------------------------------------------------
 
-            risk_unit = abs(
-                entry_price - stop_loss
-            )
+            risk_unit = abs(entry_price - stop_loss)
 
-            if use_r_tp:
-
-                # Si use_r_tp=True, TP debe depender de R
-                tp_distance = risk_unit * factor_r_tp
-
-            else:
-
-                tp_distance = (risk_unit * multiplier_tp)
+            tp_distance = (risk_unit * multiplier_tp)
 
             if signal == 1:
                 take_profit = (entry_price + tp_distance)
