@@ -849,9 +849,7 @@ def engine(
 
                 if current_r >= trailing_activation_r:
 
-                    position[
-                        "trailing_active"
-                    ] = True
+                    position["trailing_active"] = True
 
             # ====================================================
             # SL / TP
